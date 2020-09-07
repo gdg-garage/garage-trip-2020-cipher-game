@@ -17,6 +17,7 @@ void cipher2()
 	constexpr uint32 cypherIndex = 2;
 
 	std::string i = readInput(cypherIndex);
+	i = replaceLfToSpaces(i);
 	i = replaceCzech(i);
 
 	std::string s;

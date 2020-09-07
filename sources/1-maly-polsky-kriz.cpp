@@ -129,6 +129,7 @@ void cipher1()
 	generateLetterImages(cypherIndex);
 
 	std::string i = readInput(cypherIndex);
+	i = replaceLfToSpaces(i);
 	i = replaceCzech(i);
 	i = toUpper(i);
 

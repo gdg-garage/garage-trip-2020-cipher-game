@@ -23,17 +23,6 @@ namespace
 			return pathJoin(findInputPath(), "../outputs");
 		}
 	}
-
-	void replace(std::string &str, const std::string &what, const std::string &with)
-	{
-		while (true)
-		{
-			auto it = str.find(what);
-			if (it == str.npos)
-				break;
-			str.replace(it, what.length(), with);
-		}
-	}
 }
 
 const string inputPath = findInputPath();
@@ -69,6 +58,17 @@ void writeOutput(uint32 index, const std::string &output)
 	auto f = writeFile(pathJoin(outputPath, stringizer() + index + ".html"));
 	f->write(PointerRange<const char>(output.data(), output.data() + output.size()));
 	f->close();
+}
+
+void replace(std::string &str, const std::string &what, const std::string &with)
+{
+	while (true)
+	{
+		auto it = str.find(what);
+		if (it == str.npos)
+			break;
+		str.replace(it, what.length(), with);
+	}
 }
 
 std::string replaceCzech(const std::string &s)
@@ -109,6 +109,15 @@ std::string replaceCzech(const std::string &s)
 	replace(o, "Ť", "T");
 	replace(o, "Ž", "Z");
 
+	return o;
+}
+
+std::string replaceLfToSpaces(const std::string &s)
+{
+	std::string o = s;
+	replace(o, "\n", " ");
+	replace(o, "\r", " ");
+	replace(o, "  ", " ");
 	return o;
 }
 
