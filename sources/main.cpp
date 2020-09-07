@@ -5,6 +5,7 @@
 void cipher1();
 void cipher2();
 void cipher3();
+void cipher4();
 
 int main(int argc, const char *args[])
 {
@@ -21,6 +22,7 @@ int main(int argc, const char *args[])
 		cipher1();
 		cipher2();
 		cipher3();
+		cipher4();
 
 		return 0;
 	}
