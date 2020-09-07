@@ -3,6 +3,7 @@
 #include "common.h"
 
 void cipher1();
+void cipher2();
 
 int main(int argc, const char *args[])
 {
@@ -17,6 +18,7 @@ int main(int argc, const char *args[])
 		CAGE_LOG(SeverityEnum::Info, "paths", stringizer() + "output path: " + outputPath);
 
 		cipher1();
+		cipher2();
 
 		return 0;
 	}

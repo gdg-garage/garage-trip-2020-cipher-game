@@ -124,9 +124,11 @@ namespace
 
 void cipher1()
 {
-	generateLetterImages(1);
-	
-	std::string i = readInput(1);
+	constexpr uint32 cypherIndex = 1;
+
+	generateLetterImages(cypherIndex);
+
+	std::string i = readInput(cypherIndex);
 	i = replaceCzech(i);
 	i = toUpper(i);
 
@@ -135,7 +137,7 @@ void cipher1()
 	for (const char c : i)
 		s += str(c);
 
-	const std::string o = generateHeader(1) + s + generateFooter(1);
-	writeOutput(1, o);
+	const std::string o = generateHeader(cypherIndex) + s + generateFooter(cypherIndex);
+	writeOutput(cypherIndex, o);
 }
 
