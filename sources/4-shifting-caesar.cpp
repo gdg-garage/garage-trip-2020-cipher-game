@@ -15,7 +15,7 @@ namespace
 void cipher4()
 {
 	constexpr uint32 cypherIndex = 4;
-	constexpr char initialKey = 'g';
+	constexpr char initialKey = 'o';
 
 	std::string i = readInput(cypherIndex);
 	i = replaceLfToSpaces(i);

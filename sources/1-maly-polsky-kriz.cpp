@@ -77,6 +77,9 @@ namespace
 		img->initialize(40, 40, 3);
 		img->fill(vec3(1));
 
+		if (c_ == ' ')
+			return img;
+
 		if (c_ <= 'R')
 		{
 			// grid
@@ -107,6 +110,10 @@ namespace
 
 	void generateLetterImages(uint32 index)
 	{
+		{
+			auto img = genLetterImg(' ');
+			img->exportFile(pathJoin(outputPath, stringizer() + index + "/_.png"));
+		}
 		for (char c = 'A'; c <= 'Z'; c++)
 		{
 			auto img = genLetterImg(c);
@@ -116,6 +123,11 @@ namespace
 
 	std::string str(char c)
 	{
+		if (c == ' ')
+		{
+			return "&nbsp;<br />";
+			//return std::string() + " <img src=\"1/_.png\" /> ";
+		}
 		if (c >= 'A' && c <= 'Z')
 			return std::string() + " <img src=\"1/" + c + ".png\" /> ";
 		return std::string() + c;

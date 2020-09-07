@@ -15,7 +15,7 @@ namespace
 		{
 			if (c >= '1' && c <= '9')
 				len = c - '0';
-			else
+			else if (c >= 'a' && c <= 'z')
 			{
 				for (uint32 i = 0; i < len; i++)
 				{
