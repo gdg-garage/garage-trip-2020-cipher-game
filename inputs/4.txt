@@ -1,2 +1,4 @@
-Druhý váleček se otočí vždy potom, co se první váleček vrátí na začátek.
-Třetí se otočí vždy po třech otočeních druhého.
+Každé písmeno otočí prvním kolečkem.
+Po každých čtyřech otočení prvního kolečka se otočí i druhé kolečko.
+Třetí kolečko se otočí po každých jedenácti otočení prvního kolečka.
+Reflektor se netočí.

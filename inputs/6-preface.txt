@@ -1,0 +1,16 @@
+18. března
+<p>
+Každé kolečko má přední a zadní stranu.
+Na přední straně je abeceda seřazena normálně.
+Na zadní straně je abeceda přeházena tak, jak jsem uvedl v tabulce minule.
+Při šifrování (i dešifrování) operátor zmáčkne klávesu, a signál se pošle do prvního kolečka na pozici na přední straně.
+Z kolečka vyjde signál zadní stranou, s významem toho daného písmene.
+Takto signál projde všemi třemi kolečky a jde do reflektoru.
+Z reflektoru pak signál postupuje nejprve na zadní stranu třetího kolečka až nakonec vyjde z přední strany prvního kolečka a rozsvítí odpovídající žárovku.
+<p>
+Reflektor vždy propojuje dvojice písmen oběma směry - prostě je prohodí.
+Díky tomu se na dešifrování používá stejný klíč jako na šifrování.
+<p>
+Potom co operátor uvolní tlačítko, tak motůrek pootočí s kolečky.
+Díky tomu bude následující písmeno zašifrováno jinak.
+

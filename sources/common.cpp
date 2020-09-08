@@ -28,10 +28,16 @@ namespace
 const string inputPath = findInputPath();
 const string outputPath = findOutputPath();
 
+std::string readInputFile(const string &filename)
+{
+	MemoryBuffer b = readFile(pathJoin(inputPath, filename))->readAll();
+	std::string s = std::string(b.data(), b.size());
+	return s;
+}
+
 std::string readInput(uint32 index)
 {
-	MemoryBuffer b = readFile(pathJoin(inputPath, stringizer() + index + ".txt"))->readAll();
-	return std::string(b.data(), b.data() + b.size());
+	return readInputFile(stringizer() + index + ".txt");
 }
 
 std::string generateHeader(uint32 index)
@@ -42,7 +48,19 @@ std::string generateHeader(uint32 index)
 </head>
 <body>
 )foo";
-	return s.replace(s.find("TITLE", 0), 5, string(index).c_str());
+
+	s = s.replace(s.find("TITLE", 0), 5, string(index).c_str());
+
+	{
+		string n = stringizer() + index + "-preface.txt";
+		if (pathIsFile(pathJoin(inputPath, n)))
+		{
+			std::string preface = readInputFile(n);
+			s += preface + "<hr>";
+		}
+	}
+
+	return s;
 }
 
 std::string generateFooter(uint32 index)

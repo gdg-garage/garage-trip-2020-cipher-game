@@ -1,8 +1,3 @@
-<html>
-<head>
-<title>3</title>
-</head>
-<body>
 27. ledna
 <p>
 Včera se tu střílelo.
@@ -20,6 +15,3 @@ Pak se všechny musí správně otočit - jako byly otočený ty mrtvoly - na sp
 <p>
 Teď se ale musím předčasně přestěhovat.
 
-<hr>animnprveimstejcekkloosceilmsdems.
-</body>
-</html>

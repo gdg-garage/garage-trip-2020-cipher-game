@@ -8,6 +8,7 @@ void cipher3();
 void cipher4();
 void cipher5();
 void cipher6();
+void cipher7();
 
 int main(int argc, const char *args[])
 {
@@ -22,11 +23,12 @@ int main(int argc, const char *args[])
 		CAGE_LOG(SeverityEnum::Info, "paths", stringizer() + "output path: " + outputPath);
 
 		cipher1();
-		//cipher2();
+		cipher2();
 		cipher3();
 		cipher4();
 		cipher5();
 		cipher6();
+		cipher7();
 
 		return 0;
 	}

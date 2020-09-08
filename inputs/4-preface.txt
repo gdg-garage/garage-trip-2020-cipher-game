@@ -1,0 +1,6 @@
+17. února
+<p>
+Nakreslil jsem zjednodušené schéma těch částí stroje, které se podílí na šifrování.
+<p>
+<img src="enigma-scheme.png">
+

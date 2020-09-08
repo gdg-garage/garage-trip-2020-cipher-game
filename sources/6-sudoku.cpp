@@ -9,10 +9,9 @@
 
 namespace
 {
-	std::string loadSudoku(const std::string &filename)
+	std::string loadSudoku(const string &filename)
 	{
-		MemoryBuffer b = readFile(pathJoin(inputPath, cage::string(filename.data())))->readAll();
-		std::string s = std::string(b.data(), b.size());
+		std::string s = readInputFile(filename);
 		replace(s, "\n", "");
 		replace(s, "\r", "");
 		replace(s, " ", "");
