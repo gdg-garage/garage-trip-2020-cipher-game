@@ -45,6 +45,12 @@ std::string generateHeader(uint32 index)
 	std::string s = R"foo(<html>
 <head>
 <title>TITLE</title>
+<style>
+*
+{
+	font-family: monospace;
+}
+</style>
 </head>
 <body>
 )foo";

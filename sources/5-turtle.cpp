@@ -114,19 +114,19 @@ namespace
 	{
 		std::string s;
 		s.reserve(i.size() * (maxWord + 1) / maxWord + 5);
-		uint32 l = 0;
+		uint32 l = 1;
 		for (const char c : i)
 		{
+			s += c;
 			if (c == ' ')
-				l = 0;
+				l = 1;
 			else if (l == maxWord)
 			{
-				l = 0;
+				l = 1;
 				s += " ";
 			}
 			else
 				l++;
-			s += c;
 		}
 		return s;
 	}
