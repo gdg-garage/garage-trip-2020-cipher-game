@@ -109,6 +109,27 @@ namespace
 			s += turtleChar(c);
 		return s;
 	}
+
+	std::string splitLongWords(const std::string &i, uint32 maxWord = 10)
+	{
+		std::string s;
+		s.reserve(i.size() * (maxWord + 1) / maxWord + 5);
+		uint32 l = 0;
+		for (const char c : i)
+		{
+			if (c == ' ')
+				l = 0;
+			else if (l == maxWord)
+			{
+				l = 0;
+				s += " ";
+			}
+			else
+				l++;
+			s += c;
+		}
+		return s;
+	}
 }
 
 void cipher5()
@@ -121,6 +142,7 @@ void cipher5()
 	i = toLower(i);
 
 	std::string s = turtleWord(i);
+	s = splitLongWords(s);
 
 	Holder<Image> img = renderProgram(s);
 	img->exportFile(pathJoin(outputPath, stringizer() + cypherIndex + "/intermediate.png"));

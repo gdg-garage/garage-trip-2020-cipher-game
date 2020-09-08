@@ -9,9 +9,26 @@
 
 namespace
 {
-	std::string loadSudoku(const string &filename)
+	constexpr const char *configTask = R"foo(
+_6_5__
+___4__
+_3614_
+_4__36
+_513__
+__465_
+)foo";
+
+	constexpr const char *configSolution = R"foo(
+462513
+513462
+236145
+145236
+651324
+324651
+)foo";
+
+	std::string loadSudoku(std::string s)
 	{
-		std::string s = readInputFile(filename);
 		replace(s, "\n", "");
 		replace(s, "\r", "");
 		replace(s, " ", "");
@@ -138,8 +155,8 @@ void cipher6()
 {
 	constexpr uint32 cypherIndex = 6;
 
-	const std::string task = loadSudoku(string(stringizer() + cypherIndex + "-task.txt").c_str());
-	const std::string solution = loadSudoku(string(stringizer() + cypherIndex + "-solution.txt").c_str());
+	const std::string task = loadSudoku(configTask);
+	const std::string solution = loadSudoku(configSolution);
 	validateSudoku(task, solution);
 	std::string keys = stencilKeys(solution);
 	if (keys.empty())
