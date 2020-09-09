@@ -6,4 +6,5 @@ Byla to předpověď počasí.
 14. září prý mělo pršet.
 <p>
 Nejsem si jistý, zda můj nadřízený pochopí, jak důležitý je tento průlom.
-
+<p>
+Tak jsem vyluštil i druhou depeši. Jsem zdrcen.
