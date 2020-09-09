@@ -38,23 +38,31 @@ __465_
 		return s;
 	}
 
+	uint32 subgrid(uint32 x, uint32 y)
+	{
+		x /= 3;
+		y /= 2;
+		return y * 3 + x;
+	}
+
 	std::string sudokuToHtml(const std::string &cells)
 	{
 		CAGE_ASSERT(cells.size() == 36);
 
 		std::string s = "<table>\n";
-
 		for (uint32 y = 0; y < 6; y++)
 		{
 			s += "<tr>";
 			for (uint32 x = 0; x < 6; x++)
 			{
-				s += "<td>";
+				if (subgrid(x, y) % 2 == 0)
+					s += "<td class=\"odd\">";
+				else
+					s += "<td>";
 				s += cells[y * 6 + x];
 			}
 			s += "</tr>\n";
 		}
-
 		return s + "</table>\n";
 	}
 
@@ -175,9 +183,8 @@ void cipher6()
 		const char key = keys[ki++ % keys.size()];
 		const std::string t = strToTableWithStencil(solution, key, i);
 		s += sudokuToHtml(t);
-		s += "\n<br>\n";
+		s += "\n";
 	}
-
 	s += sudokuToHtml(task);
 
 	std::string style = R"foo(
@@ -185,6 +192,8 @@ void cipher6()
 table
 {
 	border: 1px solid black;
+	display: inline-block;
+	margin: 2px;
 }
 td
 {
@@ -193,6 +202,10 @@ td
 	height: 2em;
 	text-align: center;
 	vertical-align: middle;
+}
+.odd
+{
+	background-color: Gainsboro;
 }
 </style>
 )foo";

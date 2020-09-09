@@ -22,14 +22,16 @@ Z reflektoru pak signál postupuje nejprve na zadní stranu třetího kolečka a
 Reflektor vždy propojuje dvojice písmen oběma směry - prostě je prohodí.
 Díky tomu se na dešifrování používá stejný klíč jako na šifrování.
 <p>
-Potom co operátor uvolní tlačítko, tak motůrek pootočí s kolečky.
-Díky tomu bude následující písmeno zašifrováno jinak.
+Potom co operátor uvolní tlačítko tak motůrek pootočí s kolečky.
+To zajistí že následující písmeno bude zašifrováno jinak.
 
 <hr>
 <style>
 table
 {
 	border: 1px solid black;
+	display: inline-block;
+	margin: 2px;
 }
 td
 {
@@ -39,34 +41,36 @@ td
 	text-align: center;
 	vertical-align: middle;
 }
+.odd
+{
+	background-color: Gainsboro;
+}
 </style>
 <table>
-<tr><td>S<td> <td>O<td> <td>K<td>T</tr>
-<tr><td>Y<td>O<td> <td>L<td> <td> </tr>
-<tr><td> <td>S<td>R<td>L<td> <td>E</tr>
-<tr><td>E<td> <td>M<td> <td>I<td> </tr>
-<tr><td> <td> <td>C<td> <td> <td>C</tr>
-<tr><td>I<td>C<td> <td>J<td> <td>K</tr>
+<tr><td class="odd">S<td class="odd"> <td class="odd">O<td> <td>K<td>T</tr>
+<tr><td class="odd">Y<td class="odd">O<td class="odd"> <td>L<td> <td> </tr>
+<tr><td> <td>S<td>R<td class="odd">L<td class="odd"> <td class="odd">E</tr>
+<tr><td>E<td> <td>M<td class="odd"> <td class="odd">I<td class="odd"> </tr>
+<tr><td class="odd"> <td class="odd"> <td class="odd">C<td> <td> <td>C</tr>
+<tr><td class="odd">I<td class="odd">C<td class="odd"> <td>J<td> <td>K</tr>
 </table>
 
-<br>
 <table>
-<tr><td> <td> <td>E<td>R<td>O<td> </tr>
-<tr><td>U<td>Z<td> <td> <td> <td> </tr>
-<tr><td>N<td> <td>I<td> <td> <td>H</tr>
-<tr><td> <td> <td>E<td>A<td> <td>C</tr>
-<tr><td>I<td> <td> <td> <td> <td> </tr>
-<tr><td> <td>D<td> <td>.<td>P<td> </tr>
+<tr><td class="odd"> <td class="odd"> <td class="odd">E<td>R<td>O<td> </tr>
+<tr><td class="odd">U<td class="odd">Z<td class="odd"> <td> <td> <td> </tr>
+<tr><td>N<td> <td>I<td class="odd"> <td class="odd"> <td class="odd">H</tr>
+<tr><td> <td> <td>E<td class="odd">A<td class="odd"> <td class="odd">C</tr>
+<tr><td class="odd">I<td class="odd"> <td class="odd"> <td> <td> <td> </tr>
+<tr><td class="odd"> <td class="odd">D<td class="odd"> <td>.<td>P<td> </tr>
 </table>
 
-<br>
 <table>
-<tr><td> <td>6<td> <td>5<td> <td> </tr>
-<tr><td> <td> <td> <td>4<td> <td> </tr>
-<tr><td> <td>3<td>6<td>1<td>4<td> </tr>
-<tr><td> <td>4<td> <td> <td>3<td>6</tr>
-<tr><td> <td>5<td>1<td>3<td> <td> </tr>
-<tr><td> <td> <td>4<td>6<td>5<td> </tr>
+<tr><td class="odd"> <td class="odd">6<td class="odd"> <td>5<td> <td> </tr>
+<tr><td class="odd"> <td class="odd"> <td class="odd"> <td>4<td> <td> </tr>
+<tr><td> <td>3<td>6<td class="odd">1<td class="odd">4<td class="odd"> </tr>
+<tr><td> <td>4<td> <td class="odd"> <td class="odd">3<td class="odd">6</tr>
+<tr><td class="odd"> <td class="odd">5<td class="odd">1<td>3<td> <td> </tr>
+<tr><td class="odd"> <td class="odd"> <td class="odd">4<td>6<td>5<td> </tr>
 </table>
 
 </body>
