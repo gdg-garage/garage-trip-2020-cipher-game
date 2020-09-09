@@ -43,6 +43,7 @@ void cipher4()
 			s += c;
 		}
 	}
+	s = toUpper(s);
 
 	const std::string o = generateHeader(cypherIndex) + s + generateFooter(cypherIndex);
 	writeOutput(cypherIndex, o);

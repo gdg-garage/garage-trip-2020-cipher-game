@@ -40,6 +40,7 @@ void cipher3()
 		}
 	}
 	replace(s, " ", "");
+	s = toUpper(s);
 
 	const std::string o = generateHeader(cypherIndex) + s + generateFooter(cypherIndex);
 	writeOutput(cypherIndex, o);
