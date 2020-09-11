@@ -105,6 +105,8 @@ namespace
 				addDotImg(img);
 		}
 
+		img->resize(30, 30);
+
 		return img;
 	}
 

@@ -48,6 +48,7 @@ std::string generateHeader(uint32 index)
 <style>
 *
 {
+	font-size: 14pt;
 	font-family: monospace;
 }
 </style>

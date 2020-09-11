@@ -1,4 +1,5 @@
 #include <cage-core/logger.h>
+#include <cage-core/config.h>
 
 #include "common.h"
 
@@ -18,6 +19,9 @@ int main(int argc, const char *args[])
 		Holder<Logger> log1 = newLogger();
 		log1->format.bind<logFormatConsole>();
 		log1->output.bind<logOutputStdOut>();
+
+		configSetUint64("cage/random/seed1", 62989854258987);
+		configSetUint64("cage/random/seed2", 5654226896534589);
 
 		CAGE_LOG(SeverityEnum::Info, "paths", stringizer() + "input path: " + inputPath);
 		CAGE_LOG(SeverityEnum::Info, "paths", stringizer() + "output path: " + outputPath);
