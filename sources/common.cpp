@@ -51,12 +51,20 @@ std::string generateHeader(uint32 index)
 	font-size: 14pt;
 	font-family: monospace;
 }
+#docid
+{
+	float: right;
+}
 </style>
 </head>
 <body>
+<div id="docid">
+DOCID
+</div>
 )foo";
 
 	s = s.replace(s.find("TITLE", 0), 5, string(index).c_str());
+	s = s.replace(s.find("DOCID", 0), 5, string(index).c_str());
 
 	{
 		string n = stringizer() + index + "-preface.txt";
