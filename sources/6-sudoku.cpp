@@ -6,6 +6,7 @@
 #include <cage-core/memoryBuffer.h>
 
 #include <algorithm>
+#include <utility>
 
 namespace
 {
@@ -38,14 +39,16 @@ __465_
 		return s;
 	}
 
-	uint32 subgrid(uint32 x, uint32 y)
+	uint32 subgrid(uint32 x, uint32 y, bool transpose)
 	{
+		if (transpose)
+			std::swap(x, y);
 		x /= 3;
 		y /= 2;
 		return y * 3 + x;
 	}
 
-	std::string sudokuToHtml(const std::string &cells)
+	std::string sudokuToHtml(const std::string &cells, bool transposeBackground)
 	{
 		CAGE_ASSERT(cells.size() == 36);
 
@@ -55,7 +58,7 @@ __465_
 			s += "<tr>";
 			for (uint32 x = 0; x < 6; x++)
 			{
-				if (subgrid(x, y) % 2 == 0)
+				if (subgrid(x, y, transposeBackground) % 2 == 0)
 					s += "<td class=\"odd\">";
 				else
 					s += "<td>";
@@ -180,12 +183,13 @@ void cipher6()
 	uint32 ki = 0;
 	while (!i.empty())
 	{
-		const char key = keys[ki++ % keys.size()];
+		const char key = keys[ki % keys.size()];
 		const std::string t = strToTableWithStencil(solution, key, i);
-		s += sudokuToHtml(t);
+		s += sudokuToHtml(t, (ki % 2) == 1);
 		s += "\n";
+		ki++;
 	}
-	s += sudokuToHtml(task);
+	s += sudokuToHtml(task, false);
 
 	std::string style = R"foo(
 <style>
