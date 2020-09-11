@@ -143,11 +143,11 @@ void cipher5()
 
 	std::string s = turtleWord(i);
 	s = splitLongWords(s);
-	s = toUpper(s);
 
 	Holder<Image> img = renderProgram(s);
 	img->exportFile(pathJoin(outputPath, stringizer() + cypherIndex + "/intermediate.png"));
 
+	s = toUpper(s);
 	const std::string o = generateHeader(cypherIndex) + s + generateFooter(cypherIndex);
 	writeOutput(cypherIndex, o);
 }
