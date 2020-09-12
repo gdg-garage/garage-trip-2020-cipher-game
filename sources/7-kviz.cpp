@@ -4,9 +4,9 @@ namespace
 {
 }
 
-void cipher8()
+void cipher7()
 {
-	constexpr uint32 cypherIndex = 8;
+	constexpr uint32 cypherIndex = 7;
 
 	std::string s = "<img src=\"data/kviz-task.png\">";
 

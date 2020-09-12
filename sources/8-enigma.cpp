@@ -83,9 +83,9 @@ namespace
 	}
 }
 
-void cipher7()
+void cipher8()
 {
-	constexpr uint32 cypherIndex = 7;
+	constexpr uint32 cypherIndex = 8;
 
 	std::string i = readInput(cypherIndex);
 	i = replaceLfToSpaces(i);
