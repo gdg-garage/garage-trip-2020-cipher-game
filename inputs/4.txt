@@ -1,4 +1,1 @@
-Každé písmeno otočí prvním kolečkem.
-Po každých čtyřech otočeních prvního kolečka se otočí i druhé kolečko.
-Třetí kolečko se otočí po každých jedenácti otočení prvního kolečka.
-Reflektor se nemění.
+Kolečka začínají na UKT.

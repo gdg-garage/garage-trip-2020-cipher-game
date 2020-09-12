@@ -59,7 +59,7 @@ std::string generateHeader(uint32 index)
 </head>
 <body>
 <div id="docid">
-DOCID
+Cesta Stroje (DOCID)
 </div>
 )foo";
 
