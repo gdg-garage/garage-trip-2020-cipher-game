@@ -11,10 +11,10 @@ Do not look into any of the other subfolders.
 Winners
 -------
 Big congratulations to:
+ - Jan Husák
  - Eliška Kuběnová
  - Honza Nekvapil
- - Honza Husák
- - Kuba
+ - Jakub Škvára
 
 They were the first to finish all the ciphers - including, but not limited to, a lot of hacking :D
 
