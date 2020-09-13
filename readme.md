@@ -16,7 +16,7 @@ Big congratulations to:
  - Honza Nekvapil
  - Jakub Škvára
 
-They were the first to finish all the ciphers - including, but not limited to, a lot of hacking :D
+They were the first to solve all the ciphers - including, but not limited to, a lot of hacking :D
 
 Contributors
 ------------
